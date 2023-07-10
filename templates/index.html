@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <title>Caesar Cipher Encoder/Decoder</title>
+</head>
+
+<body>
+  <div class="screen">
+  <div class="form-container">
+    <form action="{{ url_for('c_encrypt') }}" method="POST">
+      <h1>Caesar Cipher Encoder/Decoder</h1>
+      <div class="navbar" id="navbar">
+        <i class="fa fa-times" onclick="hidemenu()"></i>
+        <ul>
+          <li class="active"><a href="{{url_for('index')}}">Ceaser Cypher</a></li>
+          <li><a href="{{url_for('shift')}}">Shift Cypher</a></li>
+        </ul>
+      </div>
+
+
+      <br>
+      <label for="operation">ENTER TEXT:</label>
+      <input type="text" name="plaintext" id="plaintext" value="{{ plaintext }}" placeholder="Enter Text">
+
+      <label for="operation">Operation:</label>
+      <select name="operation" id="operation" onchange="updateButtonColors()">
+        <option value="encrypt">Encrypt</option>
+        <option value="decrypt">Decrypt</option>
+      </select>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <div class="screen__background">
+    <span class="screen__background__shape screen__background__shape4"></span>
+    <span class="screen__background__shape screen__background__shape3"></span>		
+    <span class="screen__background__shape screen__background__shape2"></span>
+    <span class="screen__background__shape screen__background__shape1"></span>
+  </div>		
+</div>
+
+
+</body>
+
+</html>
