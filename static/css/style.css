@@ -1,9 +1,10 @@
-
+/* Default styles for larger screens */
 .navbar ul {
     margin-right: 30px;
     margin-left: 70px;
     list-style: none;
 }
+
 .navbar ul li {
     display: inline-block;
     padding: 0px 15px;
@@ -72,50 +73,50 @@ input[type="text"],
 input[type="number"],
 select {
     width: 100%;
-  height: 50px;
-  padding: 7px;
-  margin-right: 100%;
-  margin-bottom: 10px;
-  color: #49458f;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  border-top: 4px solid #fff4f4;
-  border-bottom: 4px solid #D1D1D4;
-  box-sizing: border-box;
+    height: 50px;
+    padding: 7px;
+    margin-bottom: 10px;
+    color: #49458f;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-top: 4px solid #fff4f4;
+    border-bottom: 4px solid #D1D1D4;
+    box-sizing: border-box;
     background: #F2F2F3;
 }
 
-label,h1{
-	color: #49458f;
-	outline: none;
-	padding: 20px 0px;	
-    margin-bottom: 10px;
-	font-family: Raleway, sans-serif;
-	font-size: 20px;
-	border-bottom-color: #6A679E;
-}
-h2{
+label, h1 {
     color: #49458f;
-	outline: none;
-	padding: 20px 0px;	
+    outline: none;
+    padding: 20px 0px;
     margin-bottom: 10px;
-	font-family: Raleway, sans-serif;
-	font-size: 20px;
-	border-bottom-color: #6A679E;
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    border-bottom-color: #6A679E;
 }
 
-.screen{
+h2 {
+    color: #49458f;
+    outline: none;
+    padding: 20px 0px;
+    margin-bottom: 10px;
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    border-bottom-color: #6A679E;
+}
+
+.screen {
     width: 75%;
     margin-left: 180px;
 }
+
 .form-container {
     width: 50%;
-    /* margin-left: ; */
     margin: 10px auto;
     z-index: 1;
-	position: relative;	
-	height: 100%;
+    position: relative;
+    height: 100%;
 }
 
 input[type="submit"] {
@@ -145,4 +146,45 @@ p {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 768px) {
+    /* For screens up to 768px wide */
+    .navbar ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .navbar i {
+        display: inline-block;
+    }
+
+    .navbar ul li:after,
+    .navbar ul .active:after {
+        display: none;
+    }
+
+    .order {
+        position: static;
+        left: auto;
+        top: auto;
+        margin: 20px auto;
+    }
+
+    .form-container {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    input[type="submit"] {
+        margin-left: 0;
+    }
 }
